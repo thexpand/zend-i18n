@@ -7,6 +7,22 @@ displaying translated content.
 See the [zend-view helpers documentation](http://framework.zend.com/manual/current/en/modules/zend.view.helpers.html#zend-view-helpers)
 for more information.
 
+## IDE auto-completion in templates
+
+The `Zend\I18n\View\Helper\HelperTrait` trait can be used to provide
+auto-completion for modern IDEs. It defines the aliases of the view helpers in a
+DocBlock as `@method` tags.
+
+### Basic Usage
+
+In order to allow auto-completion in templates, the `$this` variable should be
+type-hinted via a DocBlock.
+```php
+/**
+ * @var \Zend\I18n\View\Helper\HelperTrait $this
+ */
+```
+
 ## CurrencyFormat Helper
 
 The `CurrencyFormat` view helper can be used to simplify rendering of localized
